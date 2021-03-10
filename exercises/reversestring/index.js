@@ -6,12 +6,21 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
+
 function reverse(str) {
-    debugger;
-    return str.split("").reduce((h,i) => i + h, "")
+    let reversedStr = ''
+    for (const char of str) {
+        reversedStr = char + reversedStr
+    }
+    return reversedStr
 }
 
-reverse('abcde')
+// function reverse(str) {
+//     debugger;
+//     return str.split("").reduce((h,i) => i + h, "")
+// }
+
+// reverse('abcde')
 
 // function reverse(str) {
 //     let reverseString = ""
