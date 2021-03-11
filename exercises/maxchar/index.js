@@ -22,8 +22,6 @@ function maxChar(str) {
         }
     }
 
-    debugger;
-
     return highFreq[0]
 }
 
