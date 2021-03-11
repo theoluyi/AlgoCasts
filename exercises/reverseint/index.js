@@ -9,14 +9,19 @@
 //   reverseInt(-90) === -9
 
 function reverseInt(n) {
-    if (Math.sign(n) === -1) {
-        const tween = n.toString().split("").reverse();
-        tween.unshift(tween.pop());
-        return parseInt(tween.join(""));
-    } else {
-        return parseInt(n.toString().split("").reverse().join(""));
-    }
+    let reversedString = n.toString().split("").reverse().join("")
+    return parseInt(reversedString) * Math.sign(n)
 }
+
+// function reverseInt(n) {
+//     if (Math.sign(n) === -1) {
+//         const tween = n.toString().split("").reverse();
+//         tween.unshift(tween.pop());
+//         return parseInt(tween.join(""));
+//     } else {
+//         return parseInt(n.toString().split("").reverse().join(""));
+//     }
+// }
 
 
 // function reverseInt(n) {
