@@ -9,15 +9,26 @@
 //   reverseInt(-90) === -9
 
 function reverseInt(n) {
-    if (n.toString()[0] !== '-') {
-        return n.toString().split("").reverse().join("") * 1;
+    if (Math.sign(n) === -1) {
+        const tween = n.toString().split("").reverse();
+        tween.unshift(tween.pop());
+        return parseInt(tween.join(""));
+    } else {
+        return parseInt(n.toString().split("").reverse().join(""));
     }
-    if (n.toString()[0] === '-') {
-        const stringNum = n.toString().split("").reverse()
-        stringNum.unshift(stringNum.pop())
-        return stringNum.join("") * 1
-    }
-
 }
+
+
+// function reverseInt(n) {
+//     if (n.toString()[0] !== '-') {
+//         return n.toString().split("").reverse().join("") * 1;
+//     }
+//     if (n.toString()[0] === '-') {
+//         const stringNum = n.toString().split("").reverse()
+//         stringNum.unshift(stringNum.pop())
+//         return stringNum.join("") * 1;
+//     }
+
+// }
 
 module.exports = reverseInt;
