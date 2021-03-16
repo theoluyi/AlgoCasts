@@ -14,8 +14,7 @@
 
 function fizzBuzz(n) {
     for (let i = 1; i <= n; i++) {
-        let message;
-        if (i % 3 !== 0 && i % 5 !== 0) {message = i}
+        let message = i;
         if (i % 3 === 0) {message = "fizz"}
         if (i % 5 === 0) {message = "buzz"}
         if (i % 3 === 0 && i % 5 === 0) {message = "fizzbuzz"}
