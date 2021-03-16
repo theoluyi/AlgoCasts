@@ -12,6 +12,56 @@
 //   4
 //   buzz
 
-function fizzBuzz(n) {}
+function fizzBuzz(n) {
+    for (let i = 1; i <= n; i++) {
+        if (i % 3 !== 0 && i % 5 !== 0) {console.log(i)}
+        if (i % 3 === 0 && i % 5 === 0) {console.log("fizzbuzz")}
+        if (i % 3 === 0) { console.log("fizz")}
+        if (i % 5 === 0) { console.log("buzz")}    
+    }
+}
+
+// first working solution, all if statements, no value storing, classic for loop
+// function fizzBuzz(n) {
+//     for (let i = 1; i <= n; i++) {
+//         if (i % 3 !== 0 && i % 5 !== 0) {console.log(i)}
+//         if (i % 3 === 0 && i % 5 === 0) {console.log("fizzbuzz")}
+//         if (i % 3 === 0) { console.log("fizz")}
+//         if (i % 5 === 0) { console.log("buzz")}    
+//     }
+// }
+
+// first stepwise fix: corrects for loop conditions
+// gets console logging correct number of times
+// function fizzBuzz(n) {
+//     for (let i = 1; i <= n; i++) {
+//         console.log(i)
+//     }
+// }
+
+// SECOND TRY, DOESN'T WORK EITHER; surprisd that this doesn't, since this seems
+// like a much simpler approach; not trying to store values
+// would probably benefit from either/or A) pseudocode B) debugger
+// function fizzBuzz(n) {
+//     for (let i = 0; i < n; i++) {
+//         if (i % 3 !== 0 && i % 5 !== 0) {console.log(i)}
+//         if (i % 3 === 0 && i % 5 === 0) {console.log("fizzbuzz")}
+//         if (i % 3 === 0) { console.log("fizz")}
+//         if (i % 5 === 0) { console.log("buzz")}
+//     }
+// }
+
+// FIRST TRY, DOESN'T WORK; trying to store the values in a message seems
+// problematic due to JS dynamic typing / coercion, you get values like NaN and undefined
+// function fizzBuzz(n) {
+//     for (let i = 1; i < n; i++) {
+//         let message 
+//         if (i % 3 !== 0 && i % 5 !== 0) {message = i}
+//         if (i % 3 === 0 && i % 5 === 0) {message = "fizzbuzz"}
+//         if (i % 3 === 0) { message = "fizz"}
+//         if (i % 5 === 0) { message = "buzz"}
+//         console.log(message)
+//     }
+// }
 
 module.exports = fizzBuzz;
