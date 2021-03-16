@@ -14,14 +14,29 @@
 
 function fizzBuzz(n) {
     for (let i = 1; i <= n; i++) {
-        if (i % 3 !== 0 && i % 5 !== 0) {console.log(i)}
-        if (i % 3 === 0 && i % 5 === 0) {console.log("fizzbuzz")}
-        if (i % 3 === 0) { console.log("fizz")}
-        if (i % 5 === 0) { console.log("buzz")}    
+        let message;
+        if (i % 3 !== 0 && i % 5 !== 0) {message = i}
+        if (i % 3 === 0) {message = "fizz"}
+        if (i % 5 === 0) {message = "buzz"}
+        if (i % 3 === 0 && i % 5 === 0) {message = "fizzbuzz"}
+        console.log(message)
     }
 }
 
+// second solution: uses assignment
+// function fizzBuzz(n) {
+//     for (let i = 1; i <= n; i++) {
+//         let message;
+//         if (i % 3 !== 0 && i % 5 !== 0) {message = i}
+//         if (i % 3 === 0) {message = "fizz"}
+//         if (i % 5 === 0) {message = "buzz"}
+//         if (i % 3 === 0 && i % 5 === 0) {message = "fizzbuzz"}
+//         console.log(message)
+//     }
+// }
+
 // first working solution, all if statements, no value storing, classic for loop
+// most stringent conditions at top
 // function fizzBuzz(n) {
 //     for (let i = 1; i <= n; i++) {
 //         if (i % 3 !== 0 && i % 5 !== 0) {console.log(i)}
