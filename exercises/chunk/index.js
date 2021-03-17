@@ -32,17 +32,23 @@ function chunk(array, size) {
 
     // loop over the original array
     for (const element of array) {
-        // if the chunk is still smaller than its max size, push another element into it
-        // I think this might fail because if we run out of elements we aren't adding the new chunk
+        // if the chunk is still smaller than its max size, 
+        // push another element into it
+        // I think this might fail because if we 
+        // run out of elements we aren't adding the new chunk
         if (chunk.length < size) {
             chunk.push(element)
         } 
         if (chunk.length === size || array[array.length-1] === element) {
-        // if the chunk is large enough, or we are at the last available element (QQ imprecise condition)
-        // note: condition is imprecise because we are checking the element value, not its index
-        // if we used a traditional for loop instead, there'd definitely be a certain check
+        // if the chunk is large enough, or we are at the 
+        // last available element (QQ imprecise condition)
         // add the chunk to the newArray
-            newArray.push(chunk)
+        newArray.push(chunk)
+            // note: condition is imprecise because we are checking 
+            // the element value, not its index
+            // if we used a traditional for loop instead, 
+            // there'd definitely be a certain check
+
         // repoint the chunk variable to a different array in memory, so we can build a new chunk
             chunk = []
         }
